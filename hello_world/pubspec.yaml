@@ -1,0 +1,49 @@
+name: hello_world
+description: "試験対策アプリ — 問題セット管理・演習・成績分析・間隔反復学習"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI
+  cupertino_icons: ^1.0.8
+
+  # 状態管理
+  provider: ^6.1.2
+
+  # ファイル・パス（Native のみ使用、Web では tree-shaking で除外）
+  path_provider: ^2.1.0
+  path: ^1.9.0
+
+  # ファイル操作
+  image_picker: ^1.1.0
+  file_selector: ^1.0.3
+
+  # データ処理・出力
+  pdf: ^3.11.0
+  archive: ^3.6.0
+
+  # アプリ情報
+  package_info_plus: ^8.0.0
+
+  # 国際化
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/NotoSansJP-VF.ttf

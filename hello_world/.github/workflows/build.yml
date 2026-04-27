@@ -1,0 +1,71 @@
+name: Build Flutter Desktop
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  # 手動実行も可能
+  workflow_dispatch:
+
+jobs:
+  # ─────────────────────────────────────────────
+  # Linux ビルド
+  # ─────────────────────────────────────────────
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Flutter をセットアップ
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.0'
+          channel: 'stable'
+
+      - name: Linux 依存パッケージをインストール
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y \
+            clang cmake ninja-build pkg-config \
+            libgtk-3-dev liblzma-dev libstdc++-12-dev
+
+      - name: 依存関係を取得
+        run: flutter pub get
+
+      - name: Linux 向けビルド
+        run: flutter build linux --release
+
+      - name: 成果物をアップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-release
+          path: build/linux/x64/release/bundle/
+          retention-days: 30
+
+  # ─────────────────────────────────────────────
+  # Windows ビルド
+  # ─────────────────────────────────────────────
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Flutter をセットアップ
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.0'
+          channel: 'stable'
+
+      - name: 依存関係を取得
+        run: flutter pub get
+
+      - name: Windows 向けビルド
+        run: flutter build windows --release
+
+      - name: 成果物をアップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-release
+          path: build\windows\x64\runner\Release\
+          retention-days: 30
