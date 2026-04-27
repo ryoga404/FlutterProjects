@@ -2,7 +2,7 @@
 <img src="https://github.com/ryoga404/FlutterProjects/blob/main/Image01.png">
 
 ## 作成の背景
-AWS Certified Solutions Architect Associateの学習の際にローカルで問題を解きたい（外出先でも問題演習したい）となり、昨今話題となっている
+資格試験などの学習の際にローカルで問題を解きたい（外出先でも問題演習したい）となり、昨今話題となっている
 **バイブコーディング**で作成してみようと思い作成した。
 
 ## 参考にした既存システム
@@ -42,3 +42,13 @@ Peason VueのCBTシステム
 ### D、AI学習モード（現在分析機能のみ）
 所定のルールに沿ってどの問題が苦手などという簡易レポートを出力
 <img src="https://github.com/ryoga404/FlutterProjects/blob/main/Image03.png">
+
+### E、将来的に
+・ネットワークを用いてユーザ同士の交流
+　問題セットの交換や試験情報の交換交流など
+ 
+・AI機能の充実
+　ユーザそれぞれに合わせた演習問題の提供など
+ 
+・Windows版、Mac版、モバイル版の開発
+　Flutterフレームワークの特性を活かし様々な媒体での提供
