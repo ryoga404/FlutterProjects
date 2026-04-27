@@ -1,8 +1,9 @@
 # Flutter CBT学習アプリ
+<img src="https://github.com/ryoga404/FlutterProjects/blob/main/Image01.png">
 
 ## 作成の背景
 AWS Certified Solutions Architect Associateの学習の際にローカルで問題を解きたい（外出先でも問題演習したい）となり、昨今話題となっている
-バイブコーディングで作成してみようと思い作成した。
+**バイブコーディング**で作成してみようと思い作成した。
 
 ## 参考にした既存システム
 CBT SolutionsのCBTシステム
@@ -22,13 +23,17 @@ Peason VueのCBTシステム
 バリエーションは丸バツ、多肢択一、複数選択、記述に対応
 配点や解説、メモが入れられる。
 
-さらに、既存のCBTとは違って練習特化CBTアプリにするためにタグに対応。
+さらに、既存のCBTとは違って**練習特化CBTアプリにするためにタグに対応**。
 タグによって問題絞り込みもできる！！
+
+<img src="https://github.com/ryoga404/FlutterProjects/blob/main/Image02.png">
 
 ### B、演習
 多肢選択などのバリエーションで絞り込み
 タイムリミット機能でタイムアタックみたいなこともできる
 選択肢ランダム表示により、解答の位置を覚えるということを防げる！
+<img src="https://github.com/ryoga404/FlutterProjects/blob/main/Image04.png">
+<img src="https://github.com/ryoga404/FlutterProjects/blob/main/Image05.png">
 
 ### C、模擬試験モード
 本番さながらの模擬試験モードを実装
@@ -36,3 +41,4 @@ Peason VueのCBTシステム
 
 ### D、AI学習モード（現在分析機能のみ）
 所定のルールに沿ってどの問題が苦手などという簡易レポートを出力
+<img src="https://github.com/ryoga404/FlutterProjects/blob/main/Image03.png">
